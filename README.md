@@ -9,7 +9,7 @@
 
 [![Ask Me Ms6RB#1101 !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://discord.gg/EWku7Sx) ![GitHub](https://img.shields.io/github/license/ms6rb/akibot) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/qwdqwdqwd2201)
 
-<img width="40%" height="40%" src="https://imgur.com/UMDBWCn.png">
+<img width="40%" height="40%" src="https://imgur.com/4OAMAdu.png">
 
 
 ## Using
