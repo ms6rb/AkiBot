@@ -1,0 +1,5 @@
+module.exports = {
+    "prefix": "$",
+    "region": "ar",
+    "token": "THIS IS SUPER HIGH SECRET!!!"
+}
