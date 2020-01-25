@@ -27,7 +27,7 @@
   
 
  * **Setup the ``config.js`` file**
-  languages avible: `["ar", "en"]`.
+  languages available: `["ar", "en"]`.
   ```
   {
    "prefix": "$", // default: $
