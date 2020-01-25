@@ -144,6 +144,8 @@ async function Next(author, akiMsg, session, signature, answerId, step, enter) {
         oldCollects[author.id].wait = 3
     }
 
+    if (step >= 72) return Loser(author, akiMsg);
+    
     if (nextInfo.progress >= 90 && enter !== true) {
 
         const win = await aki.win(region, session, signature, step + 1);
@@ -154,7 +156,7 @@ async function Next(author, akiMsg, session, signature, answerId, step, enter) {
 
         if (lastIds.includes(guess.id)) guess = win.answers[x];
 
-        if (guess == undefined || step >=75) {
+        if (guess == undefined) {
             return Loser(author, akiMsg);
         } else {
             oldCollects[author.id].lastid.push(guess.id);
