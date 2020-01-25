@@ -154,7 +154,7 @@ async function Next(author, akiMsg, session, signature, answerId, step, enter) {
 
         if (lastIds.includes(guess.id)) guess = win.answers[x];
 
-        if (guess == undefined) {
+        if (guess == undefined || step >=75) {
             return Loser(author, akiMsg);
         } else {
             oldCollects[author.id].lastid.push(guess.id);
