@@ -21,25 +21,25 @@
 
 ## Usage
  * **install packages**
-  ```
-  npm install
-  ```
+    ```
+    npm install
+    ```
   
 
  * **Setup the ``config.js`` file**
  
-  languages available: `["ar", "en"]`.
-  ```
-  {
-   "prefix": "$", // default: $
-   "region": "ar", // this is the language of the bot
-   "token": "YOUR BOT VERY SECRET TOKEN"
-  }
-  ```
+    languages available: `["ar", "en"]`.
+    ```
+    {
+     "prefix": "$", // default: $
+     "region": "ar", // this is the language of the bot
+     "token": "YOUR BOT VERY SECRET TOKEN"
+    }
+    ```
   
   
  * **Run the Bot**
-  run command: ``node index.js``
+    run command: ``node index.js``
   
   
 ## Commands
