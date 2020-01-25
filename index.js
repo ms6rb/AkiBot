@@ -1,13 +1,14 @@
 const { Client } = require("discord.js");
 const { prefix, region, token } = require("./config");
 const lang = require("./lang");
-const { startAki, endGame, oldCollects, text } = require("./functions")
+const { startAki, endGame, checkTime, oldCollects, text } = require("./functions")
 const client = new Client();
 
 
 client.on('ready', () => {
     console.log(`I\'m Online As ${client.user.tag}...!`);
     if (region !== 'ar' && region !== 'en') text = lang['ar'];
+    setInterval(checkTime, 180000);
 });
 
 client.on('error', console.error);
