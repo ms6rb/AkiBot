@@ -27,6 +27,7 @@
   
 
  * **Setup the ``config.js`` file**
+ 
   languages available: `["ar", "en"]`.
   ```
   {
