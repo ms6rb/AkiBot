@@ -1,17 +1,17 @@
 module.exports = {
     "en": {
-        "openGame": "**You already have a game open, close it**",
-        "noGame": "**You have no game open to close it!**",
+        "openGame": "**You already started a game, close it**",
+        "noGame": "**You haven't started a game to close!**",
         "q": "Question No.",
         "options": "**1️⃣ ➟ Yes**\n**2️⃣ ➟ No**\n**3️⃣ ➟ I Don't Know**\n**4️⃣ ➟ Probably**\n**5️⃣ ➟ Probably Not**\n\n**↩️ ➟ Correct/Back**\n**⏹️ ➟ Close The Game**",
-        "wait": "**Please wait a moment...**",
-        "correctGuess": "Great, guessed right one more time.!",
+        "wait": "*Wait a moment...**",
+        "correctGuess": "I knew it all along 😖",
         "name": "Name:",
         "dis": "Description:",
         "rank": "Rank:",
         "iThinkOf": "I think of...",
-        "giveUp": "I Give Up...",
-        "gameClosed": "**Game Closed!!**"
+        "giveUp": "I give up...",
+        "gameClosed": "**Game Over!**"
     },
     "ar": {
         "openGame": "**لديك لعبة مفتوحة بالفعل, أغلقها**",
