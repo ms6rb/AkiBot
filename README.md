@@ -33,7 +33,7 @@
     {
      "prefix": "$", // default: $
      "region": "ar", // this is the language of the bot
-     "token": "YOUR BOT VERY SECRET TOKEN"
+     "token": "YOUR BOT'S VERY SECRET TOKEN"
     }
     ```
   
@@ -43,9 +43,9 @@
   
   
 ## Commands
-  * **$aki start:** Start new Akinator Game..
+  * **$aki start:** Start a new akinator game.
   
-  * **$aki stop:** Close the game you open it.
+  * **$aki stop:** Close the game you previously started.
 
 
 ## Open Source
