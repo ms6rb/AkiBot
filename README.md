@@ -1,15 +1,17 @@
 
 
-# akiBot 
+# akiBot [![Add to Discord](https://img.shields.io/badge/Add%20to-Discord-7289da.svg)](https://discordapp.com/oauth2/authorize?client_id=670402239218581514&scope=bot&permissions=85056)
 **A Discord Akintor Bot.**
 
 **Made By:** Ms6RB#1101
 
 
+<iframe src="https://discordapp.com/widget?id=670390960483467277&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
 
 [![Ask Me Ms6RB#1101 !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://discord.gg/EWku7Sx) ![GitHub](https://img.shields.io/github/license/ms6rb/akibot) [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/qwdqwdqwd2201)
 
-<img width="40%" height="40%" src="https://imgur.com/4OAMAdu.png">
+<img width="35%" height="35%" src="https://imgur.com/dPyfnvO.png">
 
 
 ## Using
