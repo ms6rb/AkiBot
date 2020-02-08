@@ -317,20 +317,20 @@ async function endGame(authorId, akiMsg, reason) {
 
 
 async function checkTime() {
-    let _i;
-    try {
-        for (i in oldCollects) {
-            _i = i;
-            var difference = Date.now() - oldCollects[i].date; // This will give difference in milliseconds
-            var resultInMinutes = Math.round(difference / 60000);
 
-            if (resultInMinutes >= 5) {
+    for (i in oldCollects) {
+        var difference = Date.now() - oldCollects[i].date; // This will give difference in milliseconds
+        var resultInMinutes = Math.round(difference / 60000);
+
+        if (resultInMinutes >= 5) {
+            try {
                 await endGame(oldCollects[i].authorId, oldCollects[i].akiMsg, 'timeout');
+            } catch (err) {
+                Erore404(oldCollects[i].authorId, err);
             }
         }
-    } catch (err) {
-        Erore404(oldCollects[_i].authorId, err);
     }
+
 }
 
 async function Erore404(authorId, err) {
@@ -341,7 +341,7 @@ async function Erore404(authorId, err) {
 
 module.exports = {
     startAki,
-    collectors,
+    endGame,
     checkTime,
     oldCollects,
     text
