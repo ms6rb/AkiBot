@@ -301,7 +301,9 @@ async function Loser(author, akiMsg) {
 
 async function endGame(authorId, akiMsg, reason) {
 
-    oldCollects[authorId].c.map(async c => await c.stop());
+    if (oldCollects[authorId].c) {
+        oldCollects[authorId].c.map(async c => await c.stop());
+    }
     delete oldCollects[authorId];
     await akiMsg.clearReactions();
     if (reason == 'timeout') await akiMsg.edit(text.gameClosedTimeOut, {
