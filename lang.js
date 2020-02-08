@@ -12,7 +12,8 @@ module.exports = {
         "iThinkOf": "I think of...",
         "giveUp": "I give up...",
         "gameClosed": "**Game Over!**",
-        "gameClosedTimeOut": "**Timeout, Game Closed!!**"
+        "gameClosedTimeOut": "**Timeout, Game Closed!!**",
+        "noPerm": "**The Bot must have permissions** ``SEND_MESSAGES``, ``ADD_REACTIONS``"
     },
     "ar": {
         "openGame": "**لديك لعبة مفتوحة بالفعل, أغلقها**",
@@ -27,6 +28,7 @@ module.exports = {
         "iThinkOf": "أفكر في...",
         "giveUp": "خلاص أستسلم....",
         "gameClosed": "**!!تم إغلاق اللعبة**",
-        "gameClosedTimeOut": "**!!انتهى الوقت, تم إغلاق اللعبة**"
+        "gameClosedTimeOut": "**!!انتهى الوقت, تم إغلاق اللعبة**",
+        "noPerm": "``SEND_MESSAGES``, ``ADD_REACTIONS`` **يجب أن يمتلك البوت صلاحيات**"
     }
 }

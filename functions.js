@@ -43,12 +43,7 @@ async function startAki(message, akiMsg) {
         });
 
     } catch (err) {
-        console.log(err);
-        oldCollects[authorId].c.map(async c => await c.stop());
-        delete oldCollects[authorId];
-        await akiMsg.edit(`**Somthing Get Wrong... ERR404!!!**`, {
-            embed: null
-        });
+        Erore404(message.author.id, err)
     }
 }
 
@@ -89,7 +84,7 @@ async function collectors(author, akiMsg, collector, session, signature, step, o
                 .addField(text.name, oldWin.name, true)
                 .addField(text.dis, oldWin.dis, true)
                 .addField(text.rank, oldWin.rank, true)
-                .setFooter(`Send By: ${author.tag}`, akiMsg.guild.iconURl)
+                .setFooter(`Made By: MS6RB#1101`, akiMsg.guild.iconURl)
                 .setThumbnail('https://ar.akinator.com/bundles/elokencesite/images/akitudes_670x1096/triomphe.png?v95')
                 .setTimestamp()
                 .setImage(oldWin.img)
@@ -145,7 +140,7 @@ async function Next(author, akiMsg, session, signature, answerId, step, enter) {
     }
 
     if (step >= 72) return Loser(author, akiMsg);
-    
+
     if (nextInfo.progress >= 90 && enter !== true) {
 
         const win = await aki.win(region, session, signature, step + 1);
@@ -320,9 +315,10 @@ async function endGame(authorId, akiMsg, reason) {
 
 
 async function checkTime() {
-
+    let _i;
     try {
         for (i in oldCollects) {
+            _i = i;
             var difference = Date.now() - oldCollects[i].date; // This will give difference in milliseconds
             var resultInMinutes = Math.round(difference / 60000);
 
@@ -331,8 +327,14 @@ async function checkTime() {
             }
         }
     } catch (err) {
-        Erore404(oldCollects[i].authorId, err);
+        Erore404(oldCollects[_i].authorId, err);
     }
+}
+
+async function Erore404(authorId, err) {
+    await endGame(authorId, oldCollects[authorId].akiMsg, 'error');
+    console.error(err);
+    return;
 }
 
 module.exports = {
