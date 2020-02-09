@@ -39,7 +39,10 @@ client.on("message", async msg => {
             if (coolDownList.has(msg.author.id)) return;
             else {
                 coolDownList.add(msg.author.id);
-                if (oldCollects[msg.author.id]) return msg.reply(text.openGame);
+                if (oldCollects[msg.author.id]) {
+                    msg.reply(text.openGame);
+                    return coolDownList.delete(msg.author.id);
+                } 
 
                 if (!msg.channel.memberPermissions(msg.guild.me).has(['ADD_REACTIONS', 'SEND_MESSAGES'])) {
                     coolDownList.delete(msg.author.id);
