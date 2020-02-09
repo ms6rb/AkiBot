@@ -43,7 +43,8 @@ async function startAki(message, akiMsg) {
         });
 
     } catch (err) {
-        Erore404(message.author.id, err)
+        console.error(err)
+        Erore404(message.author.id)
     }
 }
 
@@ -326,17 +327,20 @@ async function checkTime() {
             try {
                 await endGame(oldCollects[i].authorId, oldCollects[i].akiMsg, 'timeout');
             } catch (err) {
-                Erore404(oldCollects[i].authorId, err);
+                console.log(err);
+                Erore404(oldCollects[i].authorId);
             }
         }
     }
 
 }
 
-async function Erore404(authorId, err) {
-    await endGame(authorId, oldCollects[authorId].akiMsg, 'error');
-    console.error(err);
-    return;
+async function Erore404(authorId) {
+    try {
+        await endGame(authorId, oldCollects[authorId].akiMsg, 'error');
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 module.exports = {
